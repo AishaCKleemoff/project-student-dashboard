@@ -15,36 +15,38 @@ export default function StudentCard({ student }) {
   const date = new Date(dob);
 
   const options = {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
+    month: "long",
+    day: "numeric",
+    year: "numeric",
   };
 
-  const birthDate = date.toLocaleDateString('en-US', options);
+  const birthDate = date.toLocaleDateString("en-US", options);
 
   const [show, setShow] = useState(false);
 
   const graduate =
     current.total > 600 && resume && linkedin && github && mockInterview ? (
-    ): (
-        ''
-      );
-  
-  
+      <p>On Track to Graduate</p>
+    ) : (
+      ""
+    );
+
   return (
     <div className="student-card">
       <section className="image-student-info">
-        <img src={profilePhoto} alt={`${preferredName} ${middleName} ${surname}`}
+        <img
+          src={profilePhoto}
+          alt={`${preferredName} ${middleName} ${surname}`}
         />
       </section>
 
       <section className="student-info color-student-info">
         <h2>
-          {preferredName} {middleName[0]}. {surname} 
+          {preferredName} {middleName[0]}. {surname}
         </h2>
 
         <p>{username}</p>
-        
+
         <p>
           <span className="birth-date">Birthday: </span> {birthDate}
         </p>
@@ -54,24 +56,31 @@ export default function StudentCard({ student }) {
         <section className="section-show-btn">
           <h4>
             <button className="show-btn" onClick={() => setShow(!show)}>
-              {show ? 'Show Less...' : 'Show More...'}
+              {show ? "Show Less..." : "Show More..."}
             </button>
           </h4>
-        </section className="show-more">
-        {show && (
-          <StudentDetailsCard
-        )
+        </section>
 
-        }
-        <section>
-
+        <section className="show-more">
+          {show && (
+            <StudentDetailsCard
+              codewarsCurrentTotals={current.total}
+              codewarsCurrentLastweek={current.lastWeek}
+              codewarsTotalGoal={goal.total}
+              cohortScoresAssignments={scores.assignments}
+              cohortScoresProjects={scores.projects}
+              cohortScoresAssessments={scores.assessments}
+              certificationsResume={resume}
+              certificationsLinkedIn={linkedin}
+              certificationsGitHub={github}
+              certificationsMockInterview={mockInterview}
+              notes={notes}
+            />
+          )}
         </section>
       </section>
 
+      <aside className="ontrack-graduate">{graduate}</aside>
     </div>
-  )
-  
+  );
 }
-
-
-
