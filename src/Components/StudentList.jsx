@@ -1,7 +1,7 @@
 import StudentCard from "./StudentCard";
 
 export default function StudentList({ data, students, cohortName }) {
-  let result = student.filter(
+  let result = students.filter(
     (student) => student.cohort.cohortCode === cohortName
   );
   return (

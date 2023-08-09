@@ -1,10 +1,15 @@
 import { useState } from "react";
 import data from "./data/data.json";
 import StudentList from "./Components/StudentList";
+import MenuCohortList from "./Components/MenuCohortList";
 
 import NavBar from "./Components/NavBar";
 function App() {
   console.log(data);
+
+  const [students, setStudents] = useState(data);
+  const [cohortName, setCohortName] = useState("All Students");
+
   return (
     <div className="App">
       <header>
@@ -17,5 +22,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
