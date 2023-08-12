@@ -13,7 +13,7 @@ export default function MenuCohortList({ data, setCohortName }) {
     }
   });
 
-  const handleCohortClick = (setCohortName) => setCohortName(cohortName);
+  const handleCohortClick = (cohortName) => setCohortName(cohortName);
 
   return (
     <div className="cohort-list">
