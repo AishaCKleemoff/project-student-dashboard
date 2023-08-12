@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import DetailStudentCard from "./DetailsStudentCard";
+
 export default function StudentCard({ student }) {
   const {
     names: { preferredName, middleName, surname },
@@ -63,7 +65,7 @@ export default function StudentCard({ student }) {
 
         <section className="show-more">
           {show && (
-            <StudentDetailsCard
+            <DetailStudentCard
               codewarsCurrentTotals={current.total}
               codewarsCurrentLastweek={current.lastWeek}
               codewarsTotalGoal={goal.total}

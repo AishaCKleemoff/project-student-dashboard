@@ -17,6 +17,7 @@ function App() {
       </header>
       <main>
         <MenuCohortList data={data} setCohortName={setCohortName} />
+
         <StudentList data={data} students={students} cohortName={cohortName} />
       </main>
     </div>
