@@ -42,7 +42,25 @@ main {
   width: 40vw;
   padding: 15px;
   margin: 1.2em auto;
+  gap: 10px;
 }
+
+.cohort-list ul {
+  list-style: none;
+}
+
+.cohort-list li {
+  margin: 10px;
+}
+
+.cohort-list li:hover {
+  cursor: pointer;
+  background-color: deeppink;
+  padding: 5px;
+  border-radius: 7px;
+  color: rgb(244, 226, 226);
+}
+
 .student-list {
   display: flex;
   flex-direction: column;
