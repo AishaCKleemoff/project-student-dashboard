@@ -4,6 +4,7 @@ import StudentList from "./Components/StudentList";
 import MenuCohortList from "./Components/MenuCohortList";
 
 import NavBar from "./Components/NavBar";
+
 function App() {
   console.log(data);
 

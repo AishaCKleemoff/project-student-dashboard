@@ -13,7 +13,7 @@ export default function DetailStudentCard({
   certificationsMockInterview,
 }) {
   const percentFormat = Number(
-    ((codewarsCurrentTotal / codewarsCurrentTotal) * 100).toFixed(0)
+    ((codewarsCurrentTotal / codewarsGoalTotal) * 100).toFixed(0)
   );
 
   return (

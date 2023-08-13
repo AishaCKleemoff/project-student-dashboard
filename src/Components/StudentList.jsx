@@ -1,6 +1,7 @@
 import StudentCard from "./StudentCard";
 
 export default function StudentList({ data, students, cohortName }) {
+  console.log(data);
   let result = students.filter(
     (student) => student.cohort.cohortCode === cohortName
   );
@@ -23,7 +24,7 @@ export default function StudentList({ data, students, cohortName }) {
       <p>
         <span className="student-total-color">
           Total Students:{" "}
-          {cohortName === "AllStudents" ? (
+          {cohortName === "All Students" ? (
             <span>{data.length}</span>
           ) : (
             <span>{result.length}</span>
@@ -31,7 +32,7 @@ export default function StudentList({ data, students, cohortName }) {
         </span>
       </p>
 
-      {cohortName === "All Student"
+      {cohortName === "All Students"
         ? students.map((student) => {
             return (
               <div key={student.id}>

@@ -66,9 +66,9 @@ export default function StudentCard({ student }) {
         <section className="show-more">
           {show && (
             <DetailStudentCard
-              codewarsCurrentTotals={current.total}
+              codewarsCurrentTotal={current.total}
               codewarsCurrentLastweek={current.lastWeek}
-              codewarsTotalGoal={goal.total}
+              codewarsGoalTotal={goal.total}
               cohortScoresAssignments={scores.assignments}
               cohortScoresProjects={scores.projects}
               cohortScoresAssessments={scores.assessments}
@@ -76,7 +76,6 @@ export default function StudentCard({ student }) {
               certificationsLinkedIn={linkedin}
               certificationsGitHub={github}
               certificationsMockInterview={mockInterview}
-              notes={notes}
             />
           )}
         </section>
